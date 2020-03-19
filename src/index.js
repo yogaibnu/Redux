@@ -17,11 +17,16 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux'
 import MainReducer from './Reducer/MainReducer'
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+// import registerServiceWorker from './registerServiceWorker';
+// import registerServiceWorker, { register } from './serviceWorker';
+import * as serviceWorker from './serviceWorker';
 const store = compose(window.devToolsExtension ? window.devToolsExtension() : f =>
     f)(createStore)(MainReducer)
 ReactDOM.render(<Provider store={store}>
     <App />
 </Provider>
     , document.getElementById('root'));
-registerServiceWorker();
+// registerServiceWorker();
+// serviceWorker();
+// register();
+serviceWorker.unregister();
