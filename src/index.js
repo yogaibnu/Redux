@@ -15,7 +15,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux'
-import MainReducer from './reducers/MainReducer'
+import MainReducer from './Reducer/MainReducer'
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 const store = compose(window.devToolsExtension ? window.devToolsExtension() : f =>
